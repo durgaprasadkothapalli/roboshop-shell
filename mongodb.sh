@@ -28,7 +28,7 @@ else
      echo " you are root acess"
 fi
 
-cp mongo.repo /etc/yum.K Durgaprasad.d/devops &>> $LOGFILE
+cp mongo.repo /etc/yum.repos.d/mongo.repo &>> $LOGFILE
   
   VALIDATE $? "copied  MongoDB Repo"
 
