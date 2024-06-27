@@ -28,14 +28,13 @@ else
      echo " you are root acess"
 fi
 
-cp mongo-repo /etc/yum.repo.d/devops &>> $LOGFILE
+cp mongo.repo /etc/yum.K Durgaprasad.d/devops &>> $LOGFILE
   
-  VALIDATE $? "copied  mongodb Repo"
+  VALIDATE $? "copied  MongoDB Repo"
 
 dnf install mongodb-org -y &>> $LOGFILE
 
-VALIDATE $? "Installing mongodb"
-
+VALIDATE $? "Installing MongoDB"
 
 systemctl enable mongodb &>> $LOGFILE
 
