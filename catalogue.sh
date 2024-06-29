@@ -35,19 +35,22 @@ dnf module enable nodejs:18 -y &>> $LOGFILE
 
 VALIDATE $? " enaabling current nodejs: 18"
 
-useradd roboshop &>> $LOGFILE
+id roboshop #if roboshop user does not exist, then it is failure
+if [ $? -ne 0 ]
+then
+    useradd roboshop
+    VALIDATE $? "roboshop user creation"
+else
+    echo -e "roboshop user already exist $Y SKIPPING $N"
+fi
 
-VALIDATE $? "creating roboshop user"
+mkdir -p /app
 
-mkdir /app &>> $LOGFILE
+VALIDATE $? "creating app directory"
 
-VALIDATE $? "Creating app directory"
+curl -o /tmp/catalogue.zip https://roboshop-builds.s3.amazonaws.com/catalogue.zip  &>> $LOGFILE
 
-
-curl -o /tmp/catalogue.zip https://roboshop-builds.s3.amazonaws.com/catalogue.zip
-
-VALIDATE $? "downloading the catalogue application"&>> $LOGFILE
-
+VALIDATE $? "Downloading catalogue application"
 cd /app 
 
 unzip -o /tmp/catalogue.zip
