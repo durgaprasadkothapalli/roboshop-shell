@@ -40,6 +40,7 @@ if [ $? -ne 0 ]
 then
     useradd roboshop
     VALIDATE $? "roboshop user creation"
+    exit1
 else
     echo -e "roboshop user already exist $Y SKIPPING $N"
 fi
