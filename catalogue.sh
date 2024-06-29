@@ -34,6 +34,10 @@ VALIDATE $? " disabling current nodejs"
 dnf module enable nodejs:18 -y &>> $LOGFILE
 
 VALIDATE $? " enaabling current nodejs: 18"
+dnf install nodejs -y  &>> $LOGFILE
+
+VALIDATE $? "Installing NodeJS:18"
+
 
 id roboshop #if roboshop user does not exist, then it is failure
 if [ $? -ne 0 ]
