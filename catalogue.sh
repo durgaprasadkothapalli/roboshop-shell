@@ -61,7 +61,7 @@ npm install &>> $LOGFILE
 
 VALIDATE $? " unzipping catalogue"
 
-cp /K.Durgaprasad/devops/roboshop-shell/catalogue.service /etc/systemd/system/catalogue.service &>> $LOGFILE
+cp /home/K.Durgaprasad/devops/roboshop-shell/catalogue.service /etc/systemd/system/catalogue.service &>> $LOGFILE
 
 VALIDATE $? " copying catalogue service file"
 
@@ -78,7 +78,7 @@ systemctl start catalogue &>> $LOGFILE
 
 VALIDATE $? "Starting catalogue"
 
-cp /K.Durgaprasad/devops/roboshop-shell/mongo.repo /etc/yum.repos.d/mongo.repo
+cp /home/K.Durgaprasad/devops/roboshop-shell/mongo.repo /etc/yum.repos.d/mongo.repo
 
 VALIDATE $? "copying mongodb repo"
 
