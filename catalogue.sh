@@ -54,11 +54,11 @@ unzip -o /tmp/catalogue.zip
 
 VALIDATE $? " unzipping catalogue"&>> $LOGFILE
 
-npm install
+npm install &>> $LOGFILE
 
-VALIDATE $? " unzipping catalogue"&>> $LOGFILE
+VALIDATE $? " unzipping catalogue"
 
-cp /K.Durgaprasad/devops/roboshop-shell/catalogue.service /etc/systemd/system/catalogue.service
+cp /K.Durgaprasad/devops/roboshop-shell/catalogue.service /etc/systemd/system/catalogue.service &>> $LOGFILE
 
 VALIDATE $? " copying catalogue service file"
 
