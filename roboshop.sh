@@ -7,7 +7,7 @@ INSTANCES=( "mongodb" "redis" "mysql" "rabbitmq""catalogue" "user" "payment" "di
 for i in "${INSTANCES[@]}"
 do
       if  [ $i == "mongodb"] || [ $i == "mysql"] || [ $i == "shipping"] ||
-      then
+      
            INSTANCES_TYPE="t3.small"
        else
             INSTANCES_TYPE="t2.micro"
