@@ -4,7 +4,7 @@ AMI=ami-0b4f379183e5706b9  #this keeps on changing
 SG_ID=sg-085cac89efaca39c7 #replace with your SG ID
 INSTANCES=("mongodb" "redis" "mysql" "rabbitmq" "catalogue" "user" "cart" "shipping" "payment" "dispatch" "web")
 ZONE_ID=Z09594872R3YKNFLE7JEU # replace your zone ID
-DOMAIN_NAME="76adaws.tech"
+DOMAIN_NAME="76sdaws.tech"
 
 
 
